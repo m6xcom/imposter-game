@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+.input-wrapper{
+    width: fit-content;
+    height: fit-content;
+}
+.input-wrapper.hide{
+    display: none;
+}
+.player-block.hide{
+    display: none;
+}
+.player-block__step.hide{
+    display: none;
+}
+.player-block__step + .player-block__step{
+    display: none;
+}
+.player-block__step.hide + .player-block__step{
+    display: block;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imposter game</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="input-wrapper">
+        <h1>Imposter game</h1>
+        <input type="number" class="js--players-count" min="0" placeholder="Введіть к-сть гравців">
+        <button type="button" class="js--confirm-count">Відправити</button>
+    </div>
+    <div class="player-block-wrapper js--player-blocks">
+        
+    </div>
+    <template id="playerBlock">
+        <div class="player-block hide">
+            <div class="player-block__step">
+                <h2>Гравець номер <span class="js--player-number">1</span> приготуватись</h1>
+                <button type="button" class="js--player-ready">Готовий</button>
+            </div>
+            <div class="player-block__step">
+                <h2>Твоє слово: <span class="js--your-word"></span></H2>
+                <button class="js--next-player">Нажми сюди перед наступним гравцем</button>
+            </div>
+        </div>
+    </template>
+    <script src="./index.js">
+
+    </script>
+</body>
+</html>
