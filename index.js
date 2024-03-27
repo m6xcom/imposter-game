@@ -12,11 +12,11 @@ fetch('./words.json').then(async resp=>{
 
 
 function renderPlayerBlock(playersCount){
-    const playerWhoDoesntKnowWord = Math.floor(Math.random() * playersCount);
-    for(let i = 1; i <= playersCount; i++){
+    const playerWhoDoesntKnowWord = Math.floor(Math.random() * (playersCount - 1));
+    for(let i = 0; i < playersCount; i++){
         const playerBlock = playerBlockTemplate.cloneNode(true);
-        if(i === 1) playerBlock.classList.remove('hide');
-        playerBlock.querySelector('.js--player-number').innerHTML = i;
+        if(i === 0) playerBlock.classList.remove('hide');
+        playerBlock.querySelector('.js--player-number').innerHTML = i + 1;
         playerBlock.querySelector('.js--your-word').innerHTML = i===playerWhoDoesntKnowWord ? '-' : word;
         playerBlocksWrapper.insertAdjacentElement('beforeend', playerBlock);
     }
